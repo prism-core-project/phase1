@@ -629,7 +629,56 @@ max-width:60ch;
 line-height:1.7;
 
 }
+/* ==================================================
+   KNOWLEDGE PROTOCOL UI最終調整
+   ================================================== */
+.kp-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
 
+@media (max-width: 768px) {
+  .kp-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* ボタン本体（変数を活かした質感向上） */
+.kp-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 8px;
+  background: var(--bg-panel-raised, #1C242D);
+  color: var(--cyan, #4FD1C5);
+  border: 1px solid var(--line-bright, #3A4652);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ホバー時の発光＆浮き上がりフィードバック */
+.kp-button:hover {
+  background: var(--cyan, #4FD1C5);
+  color: var(--bg-void, #0F1419);
+  border-color: var(--cyan, #4FD1C5);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(79, 209, 197, 0.3);
+}
+
+/* クリック時の押し込み感 */
+.kp-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(79, 209, 197, 0.2);
+}
 </style>
 
 </head>
