@@ -271,6 +271,48 @@
   background-color: rgba(100, 181, 246, 0.06) !important; /* 背景をほのかにホバー色に */
   border-color: rgba(100, 181, 246, 0.8) !important;    /* 枠線を鮮やかに発光 */
   box-shadow: 0 0 12px rgba(100, 181, 246, 0.35) !important;  /* 柔らかい外光を追加 */
+}/* == KNOWLEDGE PROTOCOL スタイリング == */
+.kp-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+
+.kp-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.kp-btn.primary {
+  background: rgba(100, 181, 246, 0.15);
+  color: #64b5f6;
+  border: 1px solid rgba(100, 181, 246, 0.6);
+}
+
+.kp-btn.primary:hover {
+  background: rgba(100, 181, 246, 0.3);
+  box-shadow: 0 0 10px rgba(100, 181, 246, 0.4);
+}
+
+.kp-btn.secondary {
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-dim);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.kp-btn.secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+  border-color: rgba(255, 255, 255, 0.3);
 }
 </style>
 </head>
@@ -345,16 +387,21 @@
         <li>センサー配置マップ・数値フォーマット (CSV等)</li>
       </ul>
     </div>
-    <div class="gate-panel concept">
-      <span class="tag">Concept &amp; Philosophy</span>
-      <h3>構想・思想背景層</h3>
-      <p class="d">将来的な応用可能性や、情報を共有知として整理するための概念フレームワークです。</p>
-      <ul>
-        <li>将来応用イラスト・システム構想図</li>
-        <li>ナレッジ整理プロトコルの考え方</li>
-        <li>オープンな追試コミュニティの提案</li>
-      </ul>
-    </div>
+   <div class="gate-panel knowledge-protocol-panel">
+  <span class="tag">KNOWLEDGE PROTOCOL</span>
+  <h3>Explore. Verify. Share.</h3>
+  <p class="d" style="color: var(--cyan); margin-bottom: 8px;">自由に探索し、検証し、必要であれば共有する。</p>
+  <p class="d">
+    PRISM COREの公開情報は、実験・計測・検証を通じて現在も更新されています。<br>
+    閲覧・参加は自由です。公開情報は登録なしでそのまま探索できます。
+  </p>
+
+  <div class="kp-actions">
+    <a href="#data" class="kp-btn primary">マトリクスを探索</a>
+    <a href="#concept" class="kp-btn secondary">データを共有する</a>
+    <a href="#roadmap" class="kp-btn secondary">質問・フィードバック</a>
+  </div>
+</div>
   </div>
 
   <!-- DATA ARCHIVE -->
