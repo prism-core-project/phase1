@@ -387,22 +387,7 @@
         <li>センサー配置マップ・数値フォーマット (CSV等)</li>
       </ul>
     </div>
-   <div class="gate-panel knowledge-protocol-panel">
-  <span class="tag">KNOWLEDGE PROTOCOL</span>
-  <h3>Explore. Verify. Share.</h3>
-  <p class="d" style="color: var(--cyan); margin-bottom: 8px;">自由に探索し、検証し、必要であれば共有する。</p>
-  <p class="d">
-    PRISM COREの公開情報は、実験・計測・検証を通じて現在も更新されています。<br>
-    閲覧・参加は自由です。公開情報は登録なしでそのまま探索できます。
-  </p>
-
-  <div class="kp-actions">
-    <a href="#data" class="kp-btn primary">マトリクスを探索</a>
-    <a href="#concept" class="kp-btn secondary">データを共有する</a>
-    <a href="#roadmap" class="kp-btn secondary">質問・フィードバック</a>
-  </div>
-</div>
-  </div>
+ 
 
   <!-- DATA ARCHIVE -->
   <section id="data">
@@ -428,7 +413,28 @@
         <div class="param"><div class="k">電源仕様</div><div class="v">DC48V / AC100-240V <span style="color:#64b5f6; font-weight:bold;">○</span></div></div>
       </div>
 
-    <div class="disclaimer"><strong>注意：</strong>本資料の数値・性能・成立性は研究段階の仮説を含み、実測・検証によって更新されます。AIによる解析結果は参考情報であり、最終的な判断は人間が行います。</div>
+   <!-- DISCLAIMER & KNOWLEDGE PROTOCOL PORTAL -->
+<div class="disclaimer" style="padding: 16px 20px; border: 1px solid rgba(255, 120, 80, 0.4); background: rgba(20, 15, 15, 0.6); border-radius: 6px; margin: 20px 0;">
+  <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+    
+    <!-- 左側：注意書き ＆ 15章推奨メッセージ -->
+    <div style="flex: 1; min-width: 280px;">
+      <div style="font-size: 11px; color: var(--cyan); letter-spacing: 0.1em; font-weight: 700; margin-bottom: 4px;">KNOWLEDGE PROTOCOL</div>
+      <div style="font-size: 13.5px; font-weight: 700; color: #fff; margin-bottom: 6px;">Explore. Verify. Share. <span style="font-size: 12px; font-weight: normal; color: var(--text-dim);">― 自由に探索し、検証し、必要であれば共有する。</span></div>
+      <p style="font-size: 12px; line-height: 1.6; color: #c0c8d0; margin: 0;">
+        本資料の数値・仮説・実測値は研究段階のものであり、現在も更新中です。登録や参加は不要で、そのまま公開情報を探索できます。
+      </p>
+    </div>
+
+    <!-- 右側：15章推奨アクションボタン（将来的にQRコードやイラストも配置可能） -->
+    <div class="kp-actions" style="margin-top: 0;">
+      <a href="#data" class="kp-btn primary">マトリクスを探索</a>
+      <a href="#concept" class="kp-btn secondary">データを共有する</a>
+      <a href="#roadmap" class="kp-btn secondary">質問・フィードバック</a>
+    </div>
+
+  </div>
+
 
     <div class="stage-list">
       <div class="stage">
