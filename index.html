@@ -249,22 +249,32 @@
 
   ::selection{ background:var(--cyan-dim); color:var(--cyan);}
 
-/* == ALL CARDS HOVER EFFECT (バランス調整版) == */
-.phase-card, .concept-card, .status-card, .legend-item, .gate-panel {
-  transition: all 0.3s ease;
+/* == ALL CARDS HOVER EFFECT (最適化版) == */
+
+/* 1. 下の2マスやロードマップ（大きなカード）：ボコッと浮いて拡大 */
+.phase-card, .concept-card, .gate-panel {
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
   transform: translateY(0) scale(1);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   cursor: pointer;
 }
 
-.phase-card:hover, .concept-card:hover, .status-card:hover, .legend-item:hover, .gate-panel:hover {
-  /* 浮き上がり幅を-12pxから-4pxに抑え、拡大も1.02と上品に */
-  transform: translateY(-4px) scale(1.02) !important;
-  
-  /* 影と青い光を枠内に馴染ませる */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4), 0 0 15px rgba(100, 181, 246, 0.4) !important;
-  border-color: rgba(100, 181, 246, 0.9) !important;
-  outline: none !important; /* はみ出しの原因になる広範outlineを解除 */
+.phase-card:hover, .concept-card:hover, .gate-panel:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(100, 181, 246, 0.4) !important;
+  border-color: rgba(100, 181, 246, 0.8) !important;
+}
+
+/* 2. 上の5マス（詰まった小さな枠）：潰れないよう、内側〜外枠の「シアン発光」のみで演出 */
+.legend-item, .param {
+  transition: all 0.25s ease !important;
+  cursor: pointer;
+}
+
+.legend-item:hover, .param:hover {
+  background: rgba(100, 181, 246, 0.08) !important; /* 背景がふわっと明るく */
+  border-color: rgba(100, 181, 246, 0.8) !important; /* 枠線が鮮やかに */
+  box-shadow: inset 0 0 12px rgba(100, 181, 246, 0.2), 0 0 10px rgba(100, 181, 246, 0.3) !important; /* 内外に綺麗なネオン発光 */
 }
 
 </style>
