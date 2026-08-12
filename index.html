@@ -249,28 +249,29 @@
 
   ::selection{ background:var(--cyan-dim); color:var(--cyan);}
 
-/* == STATUS LAMP HOVER EFFECT == */
-/* すべてのカード・パネル要素を一つのグループとして定義 */
+/* == UNIFIED CLEAN HOVER EFFECT == */
+/* すべてのカード・パネル要素（.paramを追加）を一括定義 */
 .legend-item,
-.param,
+.param, /* ← ここを追加 */
 .gate-panel,
 .concept-card,
 .phase-card {
-  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.25s ease !important; /* アニメーションは維持 */
   cursor: pointer;
+  transform: none !important; /* 浮き上がりは防止 */
+  scale: 1 !important;        /* 拡大も防止 */
 }
 
-/* ホバー時：計測機器のように上品に発光（レイアウト変化なし） */
+/* ホバー時：計測機器のような上品に発光（レイアウト変化なし） */
 .legend-item:hover,
-.param:hover,
+.param:hover, /* ← ここを追加 */
 .gate-panel:hover,
 .concept-card:hover,
 .phase-card:hover {
-  background-color: rgba(100, 181, 246, 0.04);
-  border-color: rgba(100, 181, 246, 0.6);
-  box-shadow: inset 0 0 8px rgba(100, 181, 246, 0.15), 0 0 8px rgba(100, 181, 246, 0.2);
+  background-color: rgba(100, 181, 246, 0.06) !important; /* 背景をほのかにホバー色に */
+  border-color: rgba(100, 181, 246, 0.8) !important;    /* 枠線を鮮やかに発光 */
+  box-shadow: 0 0 12px rgba(100, 181, 246, 0.35) !important;  /* 柔らかい外光を追加 */
 }
-
 </style>
 </head>
 <body>
