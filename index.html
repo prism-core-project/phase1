@@ -249,28 +249,17 @@
 
   ::selection{ background:var(--cyan-dim); color:var(--cyan);}
 
-/* == ALL CARDS HOVER EFFECT (最適化版) == */
-
-/* 1. 下の2マスやロードマップ（大きなカード）：ボコッと浮いて拡大 */
-.phase-card, .concept-card, .gate-panel {
-  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
-  transform: translateY(0) scale(1);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-  cursor: pointer;
-}
-
-.phase-card:hover, .concept-card:hover, .gate-panel:hover {
-  transform: translateY(-8px) scale(1.03) !important;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 15px rgba(100, 181, 246, 0.4) !important;
-  border-color: rgba(100, 181, 246, 0.8) !important;
-}
-
-/* 2. 上の5マス（詰まった小さな枠）：潰れないよう、内側〜外枠の「シアン発光」のみで演出 */
-.legend-item, .param {
+/* == UNIFIED CLEAN HOVER EFFECT == */
+.phase-card, .concept-card, .gate-panel, .legend-item, .param {
   transition: all 0.25s ease !important;
   cursor: pointer;
 }
 
+.phase-card:hover, .concept-card:hover, .gate-panel:hover, .legend-item:hover, .param:hover {
+  background-color: rgba(100, 181, 246, 0.06) !important;
+  border-color: rgba(100, 181, 246, 0.8) !important;
+  box-shadow: 0 0 12px rgba(100, 181, 246, 0.35) !important;
+}
 .legend-item:hover, .param:hover {
   background: rgba(100, 181, 246, 0.08) !important; /* 背景がふわっと明るく */
   border-color: rgba(100, 181, 246, 0.8) !important; /* 枠線が鮮やかに */
