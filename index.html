@@ -679,6 +679,28 @@ line-height:1.7;
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(79, 209, 197, 0.2);
 }
+  /* システム構成図スタイル */
+.system-diagram {
+  max-width: 480px;
+  margin: 0 auto 40px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--bg-panel);
+}
+.system-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.system-diagram figcaption {
+  padding: 12px 16px;
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text-dim);
+  border-top: 1px solid var(--line);
+  text-align: center;
+}
 </style>
 
 </head>
@@ -760,7 +782,10 @@ PRISM CORE は、完成した実用機ではなく<strong>研究・計測プラ�
 <p class="section-note">各項目には状態・出典・更新履歴を付与する。識別子は値を含まない連番とし、条件・数値はメタデータとして別途管理する。</p>
 
 </div>
-
+<figure class="system-diagram">
+  <img src="file_000000009c44820980b5109e87467005.png" alt="PRISM CORE Phase1 システム構成図 — MCE×境界層流体タービン×音波振動応用 統合エネルギー研究・計測プラットフォーム" loading="lazy">
+  <figcaption>Phase 1 システム構成図</figcaption>
+</figure>
 
 <p class="data-status-bar">この一覧は現在準備中です。公開可能な検証済み・検証中データが確定次第、この形式で追加されます。</p>
 
